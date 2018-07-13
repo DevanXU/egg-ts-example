@@ -18,4 +18,21 @@ describe('test/app/controller/topics.test.js', () => {
                 ],
             });
     });
+
+    it('should POST /api/v1/topics/ 201', () => {
+        app.mockCsrf();
+        app.mockService('topicsvc', 'create', '123');
+
+        return app.httpRequest()
+            .post('/api/v1/topics')
+            .send({
+                accessToken: '123',
+                title: 'title',
+                content: 'hello',
+            })
+            .expect(201)
+            .expect({
+                topic_id: 123,
+            });
+    });
 });

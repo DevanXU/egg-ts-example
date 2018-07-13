@@ -19,7 +19,7 @@ export default class TopicController extends Controller {
 
         ctx.validate(createRule);
 
-        const id = await ctx.service.topics.create(ctx.request.body);
+        const id = await ctx.service.topicsvc.create(ctx.request.body);
 
         ctx.logger.debug('TopicController, id: ', id);
 

@@ -40,5 +40,14 @@ export default (appInfo: EggAppInfo) => {
     match: '/api',
   };
 
+  config.sequelize = {
+    dialect: 'mysql',
+    database: 'test',
+    host: 'localhost',
+    port: '3306',
+    username: 'devan',
+    password: 'dpyneg',
+  };
+
   return config;
 };

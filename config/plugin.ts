@@ -11,6 +11,16 @@ const plugin: EggPlugin = {
     enable: true,
     package: 'egg-validate',
   },
+
+  sequelize: {
+    enable: true,
+    package: 'egg-sequelize',
+  },
+
+  // disable security for local dev only
+  // security: {
+  //   enable: false,
+  // },
 };
 
 export default plugin;
