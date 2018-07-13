@@ -5,7 +5,7 @@ export default (app: Application) => {
 
   router.get('/', controller.home.index);
 
-  // router.post('/api/v1/customers/list', controller.api.v1.customers.list);
+  router.post('/api/v1/customers/list', controller.api.v1.customers.list);
 
   router.resources('topics', '/api/v1/topics', controller.api.v1.topics);
 };
