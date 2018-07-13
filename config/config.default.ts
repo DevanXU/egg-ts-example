@@ -25,7 +25,11 @@ export default (appInfo: EggAppInfo) => {
   config.security = {
     csrf: {
       enable: false,
-    }
+    },
+  };
+
+  config.logger = {
+    consoleLevel: 'DEBUG',
   };
 
   return config;
