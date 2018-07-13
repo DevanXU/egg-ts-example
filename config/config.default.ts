@@ -32,5 +32,13 @@ export default (appInfo: EggAppInfo) => {
     consoleLevel: 'DEBUG',
   };
 
+  config.middleware = [
+    'errorHandler',
+  ];
+
+  config.errorHandler = {
+    match: '/api',
+  };
+
   return config;
 };
