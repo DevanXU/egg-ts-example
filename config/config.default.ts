@@ -40,13 +40,16 @@ export default (appInfo: EggAppInfo) => {
     match: '/api',
   };
 
+  // Use below command to start a MySQL docker.
+  // "docker run --name=test-mysql -v /home/devan/data/mysql/test:/var/lib/mysql \
+  // -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql --default-authentication-plugin=mysql_native_password"
   config.sequelize = {
     dialect: 'mysql',
     database: 'test',
-    host: 'localhost',
+    host: '172.17.0.3',
     port: '3306',
-    username: 'devan',
-    password: 'dpyneg',
+    username: 'root',
+    password: '',
   };
 
   return config;
