@@ -6,7 +6,7 @@ export default class CustomerController extends Controller {
 
         ctx.logger.debug('CustomerController.index');
 
-        const customerList = await ctx.service.customersvc.list(ctx.request.body);
+        const customerList = await ctx.service.customersvc.list();
 
         ctx.logger.debug('CustomerController, list: ', customerList);
 
