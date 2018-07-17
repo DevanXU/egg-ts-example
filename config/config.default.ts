@@ -16,7 +16,8 @@ export default (appInfo: EggAppInfo) => {
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1531379913613_7008';
+  //config.keys = appInfo.name + '_1531379913613_7008';
+  config.keys = `${appInfo.name}_${Math.random()}_${Date.now().valueOf()}`;
 
   // add your config here
   config.middleware = [];
@@ -46,7 +47,7 @@ export default (appInfo: EggAppInfo) => {
   config.sequelize = {
     dialect: 'mysql',
     database: 'test',
-    host: '172.17.0.3',
+    host: 'mysql', // keep consistent with 'docker-compose.yml'
     port: '3306',
     username: 'root',
     password: '',
