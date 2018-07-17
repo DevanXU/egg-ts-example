@@ -1,6 +1,20 @@
+## Cautions
+> The `MySQL` docker is linked together with `nodejs` docker, and hard coding in `config/config.default.ts`, `host` of section `config.sequelize`. The `host` should be ALWAYS kept the same as `links` in `docker-compose.yml`, otherwise the service will be failed.
 
 
-### [ELK-Docker setup for logs analysis](https://elk-docker.readthedocs.io)
+## Service Setup
+**Use 'docker-compose' to setup the whole service.**
+- Prerequisite
+  > Create the database first. This will be not part of the service setup, for data security consideration. Because you would setup/update the service from time to time, but you definitely don't want to touch the data.
+
+- Setup
+  > Run `docker-compose up` to setup the nodejs and mysql service.
+
+- Service Down
+  > Run `docker-compose down` to tear down the services.
+
+
+## [ELK-Docker setup for logs analysis](https://elk-docker.readthedocs.io)
 
 - Pull ELK docker image
 `docker pull sebp/elk`
