@@ -21,6 +21,7 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "dingtalk-jsapi": "^2.0.58",
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^3.1.5",
